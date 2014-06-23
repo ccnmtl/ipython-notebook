@@ -1,5 +1,4 @@
-FROM  saltstack/ubuntu-13.10
-RUN echo "deb http://archive.ubuntu.com/ubuntu saucy universe " >> /etc/apt/sources.list
+FROM  ubuntu:14.04
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get install -y language-pack-en
@@ -13,10 +12,12 @@ RUN dpkg-reconfigure locales
 RUN apt-get install -y python-imaging python-cairo
 RUN apt-get install -y build-essential python-pip python-dev
 RUN apt-get install -y libfreetype6-dev libpng-dev
+RUN apt-get build-dep -y python-matplotlib
+RUN apt-get build-dep -y ipython-notebook
 
-RUN pip install -U tornado
-RUN pip install -U ipython
-RUN pip install -U matplotlib
+RUN pip install tornado
+RUN pip install ipython
+RUN pip install matplotlib
 RUN pip install pygments
 RUN apt-get install -y pandoc
 RUN apt-get install -y python-scipy python-pandas
