@@ -40,7 +40,7 @@ processing power.
 
 You should now be able to point your browser at
 
-   http://<youripaddress>:8123/
+   http://_youripaddress_:8123/
 
 And start using it. If you are running docker locally, you can use
 http://0.0.0.0:8123/
