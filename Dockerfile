@@ -23,6 +23,10 @@ RUN apt-get install -y pandoc
 RUN apt-get install -y python-scipy python-pandas
 RUN pip install textblob scikit-learn nltk gensim ggplot
 RUN apt-get install -y python-qt4
+RUN apt-get install -y libxml2-dev libxslt1-dev python-dev
+RUN (pip install networkx pdfminer powerlaw pypdf2 slate beautifulsoup4 \
+		ner httplib2 lxml mechanize selenium)
+RUN pip install http://py-editdist.googlecode.com/files/py-editdist-0.3.tar.gz
 
 VOLUME /notebooks
 WORKDIR /notebooks
