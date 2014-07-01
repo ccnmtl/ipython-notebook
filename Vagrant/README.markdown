@@ -27,11 +27,9 @@ vagrant box add ipython-notebook http://ccnmtl.columbia.edu/.../ipython-notebook
  
 Note: - you can also use a standard ubunutu box, but you will need to recompile all the dependencies. The only other things we changed on this box are the ipython notebook profile. We customized the ipython_notebook_config.py with the following settings:
 
-c.NotebookApp.ip = '*'
-
-c.NotebookApp.open_browser = False
-
-c.NotebookManager.notebook_dir = u'/vagrant/notebooks'
+    c.NotebookApp.ip = '*'
+    c.NotebookApp.open_browser = False
+    c.NotebookManager.notebook_dir = u'/vagrant/notebooks'
 
 
 ### Step 2: git clone this repo
@@ -48,4 +46,4 @@ c.NotebookManager.notebook_dir = u'/vagrant/notebooks'
 
 If all went well, you can now visit your very own ipython notebook, from your host computer's browser, at 
 
-http://localhost:8888 
+    http://localhost:8888 
