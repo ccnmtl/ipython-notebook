@@ -39,10 +39,14 @@ If all went well, you can now visit your very own ipython notebook, from your ho
     http://localhost:8888 
 
 ### Appendix
-    The Vagrantfile will download the ipython-notebook box for you.  If you want to reuse this box, you can 
+The Vagrantfile will download the ipython-notebook box for you.  If you want to reuse this box, you can add the box
  
     vagrant box add ipython-notebook http://ccnmtl.columbia.edu/projects/ipython-notebook/ipython-notebook_trusty_amd64.box
  
+and then simply do
+
+    vagrant init ipython-notebook
+    
 Note: - you can also use a standard ubunutu box, but you will need to recompile all the dependencies. The only other things we changed on this box are the ipython notebook profile. We customized the ipython_notebook_config.py with the following settings:
 
     c.NotebookApp.ip = '*'
