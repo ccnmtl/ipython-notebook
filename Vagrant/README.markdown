@@ -32,11 +32,21 @@ Next, install Vagrant:
 
     $ vagrant up
 
-### Visit your notebook:
+### Step 3: Visit your notebook:
 
 If all went well, you can now visit your very own ipython notebook, from your host computer's browser, at 
 
     http://localhost:8888 
+
+Your notebook will be able to access files in the 'notebooks' sub-directory beneath the directory you started vagrant in.
+
+### Step 4: Access your vagrant
+
+From the directory you started vagrant in, type
+
+    $ vagrant ssh
+    
+You should now be shelled into the ipython virtual server. The directory /vagrant is shared with your host computer, and you can read/write files in your Vagrantfile directory.
 
 ### Appendix
 The Vagrantfile will download the ipython-notebook box for you.  If you want to reuse this box, you can add the box
