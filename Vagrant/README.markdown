@@ -28,7 +28,9 @@ vagrant box add ipython-notebook http://ccnmtl.columbia.edu/.../ipython-notebook
 Note: - you can also use a standard ubunutu box, but you will need to recompile all the dependencies. The only other things we changed on this box are the ipython notebook profile. We customized the ipython_notebook_config.py with the following settings:
 
 c.NotebookApp.ip = '*'
+
 c.NotebookApp.open_browser = False
+
 c.NotebookManager.notebook_dir = u'/vagrant/notebooks'
 
 
@@ -40,7 +42,7 @@ c.NotebookManager.notebook_dir = u'/vagrant/notebooks'
 
 ### Step 3:
 
-vagrant up
+    $ vagrant up
 
 ### Visit your notebook:
 
