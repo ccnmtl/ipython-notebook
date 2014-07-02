@@ -47,7 +47,23 @@ From the directory you started vagrant in, type
 
     $ vagrant ssh
     
-You should now be shelled into the ipython virtual server. The directory /vagrant is shared with your host computer, and you can read/write files in your Vagrantfile directory.
+You should now be shelled into the ipython virtual server. The directory /vagrant is shared with your host computer, and you can read/write files in your Vagrantfile directory. Notebooks will be written to /vagrant/notebooks
+
+### Step 5: Restarting and Troubleshooting ipython-notebook
+
+The ipython server is managed by ubuntu's [upstart](http://upstart.ubuntu.com/) daemon manager.
+
+You can restart the server with
+
+    $ sudo restart ipython-notebook
+
+or
+    $ sudo stop ipython-notebook
+    $ sudo start ipython-notebook
+    
+Logs are written to /var/log/upstart/ipython-notebook. You can trace the logs with 
+
+    $ sudo tail -f /var/log/upstrat/ipython-notebook
 
 ### Appendix
 The Vagrantfile will download the ipython-notebook box for you.  If you want to reuse this box, you can add the box
