@@ -29,7 +29,7 @@ Next, install Vagrant:
 
 (or download the raw Vagrantfile and bootstrap.sh into an appropriately named directory)
 
-### Step 2:
+### Step 2: Starting your new vagrant virtual server
 
     $ vagrant up
 
