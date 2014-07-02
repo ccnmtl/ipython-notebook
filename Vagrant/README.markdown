@@ -25,6 +25,7 @@ Next, install Vagrant:
 ### Step 1: git clone this repo
 
     $ git clone git@github.com:ccnmtl/ipython-notebook.git
+    $ cd ipython-notebook/vagrant/
 
 (or download the raw Vagrantfile and bootstrap.sh into an appropriately named directory)
 
