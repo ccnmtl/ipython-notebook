@@ -27,6 +27,8 @@ RUN apt-get install -y libxml2-dev libxslt1-dev python-dev
 RUN (pip install networkx pdfminer powerlaw pypdf2 slate beautifulsoup4 \
 		ner httplib2 lxml mechanize selenium)
 RUN pip install http://py-editdist.googlecode.com/files/py-editdist-0.3.tar.gz
+ADD https://s3.amazonaws.com/textblob/nltk_data.tar.gz /usr/local/share/
+RUN tar zxvf /usr/local/share/nltk_data.tar.gz -C /usr/local/share/
 
 VOLUME /notebooks
 WORKDIR /notebooks
