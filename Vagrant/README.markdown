@@ -58,13 +58,13 @@ From inside the directory you started vagrant in, <MY VAGRANT HOME>, run
     
 You should now be shelled into the ipython virtual server. 
 
-### Step 4: Access your ipython Notebooks and share data/files between your vagrant server and your host computer
+### Step 5: Access your ipython Notebooks and share data/files between your vagrant server and your host computer
 
 The directory /vagrant from within the vagrant server is shared with your host computer. You can read/write files in your <MY VAGRANT FILE> directory. Notebooks will be written to /vagrant/notebooks which is shared with <MY VAGRANT HOME>/notebooks.
 
 The ipython server is configured to autatically create <MY VAGRANT HOME>/notebooks if it doesn't already exist, and the ipython notebook app will look in this directory to read/write .ipynb files. 
 
-### Step 5: Restarting and Troubleshooting ipython-notebook
+### Step 6: Restarting and Troubleshooting ipython-notebook
 
 The ipython server is managed by ubuntu's [upstart](http://upstart.ubuntu.com/) daemon manager.
 
