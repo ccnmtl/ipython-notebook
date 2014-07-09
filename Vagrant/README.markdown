@@ -21,16 +21,25 @@ Next, install Vagrant:
 
 [Vagrant](http://www.vagrantup.com/)
 
+**On Windows**, you should also install ssh software. [Cywin](https://www.cygwin.com/), [PuTTY](http://www.putty.org/) or [Git](http://git-scm.com/download/win) are all viable options.  Git is probably the simplest:
+
+[Git](http://git-scm.com/download/win)
+
+Upon install, the Git installer will prompt you to choose how to "Adjust your Path environment." Select the bottom option: "Run Git and included Unix tools from the Windows Command Prompt". 
 
 ### Step 1: git clone this repo
 
     $ git clone git@github.com:ccnmtl/ipython-notebook.git
     $ cd ipython-notebook/vagrant/
 
-(or download the raw Vagrantfile and bootstrap.sh into an appropriately named directory)
+Or, download the raw [Vagrantfile](https://raw.githubusercontent.com/ccnmtl/ipython-notebook/master/Vagrant/Vagrantfile) and [bootstrap.sh](https://raw.githubusercontent.com/ccnmtl/ipython-notebook/master/Vagrant/bootstrap.sh) into an appropriately named directory.  
+
+You can create a new directory anywhere. We'll refer to this directory as <MY VAGRANT HOME> in the rest of this documentation.
 
 ### Step 2: Starting your new vagrant virtual server
 
+Change directories so that you are within the same directory as the Vagrantfile
+    $ cd <MY VAGRANT HOME>
     $ vagrant up
 
 ### Step 3: Visit your notebook:
@@ -43,11 +52,17 @@ Your notebook will be able to access files in the 'notebooks' sub-directory bene
 
 ### Step 4: Access your vagrant
 
-From the directory you started vagrant in, type
+From inside the directory you started vagrant in, <MY VAGRANT HOME>, run
 
     $ vagrant ssh
     
-You should now be shelled into the ipython virtual server. The directory /vagrant is shared with your host computer, and you can read/write files in your Vagrantfile directory. Notebooks will be written to /vagrant/notebooks
+You should now be shelled into the ipython virtual server. 
+
+### Step 4: Access your ipython Notebooks and share data/files between your vagrant server and your host computer
+
+The directory /vagrant from within the vagrant server is shared with your host computer. You can read/write files in your <MY VAGRANT FILE> directory. Notebooks will be written to /vagrant/notebooks which is shared with <MY VAGRANT HOME>/notebooks.
+
+The ipython server is configured to autatically create <MY VAGRANT HOME>/notebooks if it doesn't already exist, and the ipython notebook app will look in this directory to read/write .ipynb files. 
 
 ### Step 5: Restarting and Troubleshooting ipython-notebook
 
@@ -70,7 +85,7 @@ The Vagrantfile will download the ipython-notebook box for you.  If you want to 
  
     vagrant box add ipython-notebook http://ccnmtl.columbia.edu/projects/ipython-notebook/ipython-notebook_trusty_amd64.box
  
-and then simply do
+and then run:
 
     vagrant init ipython-notebook
     
