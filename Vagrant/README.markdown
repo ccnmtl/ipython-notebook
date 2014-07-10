@@ -27,14 +27,28 @@ Next, install Vagrant:
 
 Upon install, the Git installer will prompt you to choose how to "Adjust your Path environment." Select the bottom option: "Run Git and included Unix tools from the Windows Command Prompt". 
 
-### Step 1: git clone this repo
-
-    $ git clone git@github.com:ccnmtl/ipython-notebook.git
-    $ cd ipython-notebook/vagrant/
-
-Or, download the raw [Vagrantfile](https://raw.githubusercontent.com/ccnmtl/ipython-notebook/master/Vagrant/Vagrantfile) and [bootstrap.sh](https://raw.githubusercontent.com/ccnmtl/ipython-notebook/master/Vagrant/bootstrap.sh) into an appropriately named directory.  
+### Step 1: Create a new <MY VAGRANT HOME> folder, with this repo's Vagrantfile and bootstrap.sh 
 
 You can create a new directory anywhere. We'll refer to this directory as <MY VAGRANT HOME> in the rest of this documentation.
+
+#### Option A:
+
+Download this entire project and unzip. 
+
+    https://github.com/ccnmtl/ipython-notebook/archive/master.zip
+
+Copy the contents of ipython-notebook-master/Vagrant/ into <MY VAGRANT HOME>. 
+    
+#### Option B:
+
+Download the raw [Vagrantfile](https://raw.githubusercontent.com/ccnmtl/ipython-notebook/master/Vagrant/Vagrantfile) and [bootstrap.sh](https://raw.githubusercontent.com/ccnmtl/ipython-notebook/master/Vagrant/bootstrap.sh) and move them into <MY VAGRANT HOME>.  
+
+#### Option C:
+
+Fork and clone this repo
+    $ git clone git@github.com:<your git user>/ipython-notebook.git
+    $ cd ipython-notebook/vagrant/
+
 
 ### Step 2: Starting your new vagrant virtual server
 
