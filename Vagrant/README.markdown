@@ -37,23 +37,23 @@ Download this entire project and unzip.
 
     https://github.com/ccnmtl/ipython-notebook/archive/master.zip
 
-Copy the contents of ipython-notebook-master/Vagrant/ into <MY VAGRANT HOME>. 
+Copy the contents of ipython-notebook-master/Vagrant/ into &lt;MY VAGRANT HOME&gt;. 
     
 #### Option B:
 
-Download the raw [Vagrantfile](https://raw.githubusercontent.com/ccnmtl/ipython-notebook/master/Vagrant/Vagrantfile) and [bootstrap.sh](https://raw.githubusercontent.com/ccnmtl/ipython-notebook/master/Vagrant/bootstrap.sh) and move them into <MY VAGRANT HOME>.  
+Download the raw [Vagrantfile](https://raw.githubusercontent.com/ccnmtl/ipython-notebook/master/Vagrant/Vagrantfile) and [bootstrap.sh](https://raw.githubusercontent.com/ccnmtl/ipython-notebook/master/Vagrant/bootstrap.sh) and move them into your &lt;MY VAGRANT HOME&gt; folder.  
 
 #### Option C:
 
-Fork and clone this repo
-    $ git clone git@github.com:<your git user>/ipython-notebook.git
+Clone this repo (you need to have a github account set up to do this)
+    $ git clone git@github.com:ccnmtl/ipython-notebook.git
     $ cd ipython-notebook/vagrant/
 
 
 ### Step 2: Starting your new vagrant virtual server
 
 Change directories so that you are within the same directory as the Vagrantfile
-    $ cd <MY VAGRANT HOME>
+    $ cd &lt;MY VAGRANT HOME&gt;
     $ vagrant up
 
 ### Step 3: Visit your notebook:
@@ -66,7 +66,7 @@ Your notebook will be able to access files in the 'notebooks' sub-directory bene
 
 ### Step 4: Access your vagrant
 
-From inside the directory you started vagrant in, <MY VAGRANT HOME>, run
+From inside the directory you started vagrant in, &lt;MY VAGRANT HOME&gt;, run
 
     $ vagrant ssh
     
