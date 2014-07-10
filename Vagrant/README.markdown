@@ -46,13 +46,16 @@ Download the raw [Vagrantfile](https://raw.githubusercontent.com/ccnmtl/ipython-
 #### Option C:
 
 Clone this repo (you need to have a github account set up to do this)
+
     $ git clone git@github.com:ccnmtl/ipython-notebook.git
-    $ cd ipython-notebook/vagrant/
+
+Copy the contents of ipython-notebook/Vagrant/ into &lt;MY VAGRANT HOME&gt;. 
 
 
 ### Step 2: Starting your new vagrant virtual server
 
 Change directories so that you are within the same directory as the Vagrantfile
+
     $ cd &lt;MY VAGRANT HOME&gt;
     $ vagrant up
 
